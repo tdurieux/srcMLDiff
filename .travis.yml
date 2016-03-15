@@ -3,6 +3,9 @@ language: java
 jdk:
   - oraclejdk8
 
+script:
+  - mvn verify jacoco:report coveralls:report
+
 cache:
   directories:
     - $HOME/.m2
