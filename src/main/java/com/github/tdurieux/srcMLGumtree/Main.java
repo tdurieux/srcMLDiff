@@ -24,10 +24,10 @@ public class Main {
 		File f2 = arguments.getFile("file2");
 
 		SrcMLDiffImpl diff = new SrcMLDiffImpl();
-		diff.compare(f1, f2);
+		SrcMLDiffResult result = diff.compare(f1, f2);
 
 		if (arguments.getBoolean("json")) {
-			System.out.println(diff.toJSON().toString(4));
+			System.out.println(result.toJSON().toString(4));
 		} else {
 			System.out.println(diff.toString());
 		}

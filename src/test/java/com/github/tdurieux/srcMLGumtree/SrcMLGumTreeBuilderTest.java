@@ -18,11 +18,11 @@ public class SrcMLGumTreeBuilderTest {
 				.getResourceAsStream("/java/example1/new.xml");
 
 		SrcMLDiff diff = new SrcMLDiffImpl();
-		diff.compare(oldVersion, newVersion);
+		SrcMLDiffResult result = diff.compare(oldVersion, newVersion);
 
-		List<Action> rootActions = diff.getRootActions();
+		List<Action> rootActions = result.getRootActions();
 
-		assertEquals(5, rootActions.size());
+		assertEquals(3, rootActions.size());
 	}
 
 	@Test
@@ -33,9 +33,9 @@ public class SrcMLGumTreeBuilderTest {
 				.getResourceAsStream("/java/example2/new.xml");
 
 		SrcMLDiffImpl diff = new SrcMLDiffImpl();
-		diff.compare(oldVersion, newVersion);
+		SrcMLDiffResult result = diff.compare(oldVersion, newVersion);
 
-		List<Action> rootActions = diff.getRootActions();
+		List<Action> rootActions = result.getRootActions();
 
 		assertEquals(1, rootActions.size());
 	}
@@ -48,9 +48,9 @@ public class SrcMLGumTreeBuilderTest {
 				.getResourceAsStream("/java/example3/new.xml");
 
 		SrcMLDiff diff = new SrcMLDiffImpl();
-		diff.compare(oldVersion, newVersion);
+		SrcMLDiffResult result = diff.compare(oldVersion, newVersion);
 
-		List<Action> rootActions = diff.getRootActions();
+		List<Action> rootActions = result.getRootActions();
 
 		assertEquals(22, rootActions.size());
 	}
@@ -63,9 +63,9 @@ public class SrcMLGumTreeBuilderTest {
 				.getResourceAsStream("/java/example4/new.xml");
 
 		SrcMLDiff diff = new SrcMLDiffImpl();
-		diff.compare(oldVersion, newVersion);
+		SrcMLDiffResult result = diff.compare(oldVersion, newVersion);
 
-		List<Action> rootActions = diff.getRootActions();
+		List<Action> rootActions = result.getRootActions();
 
 		assertEquals(3, rootActions.size());
 	}
@@ -78,9 +78,9 @@ public class SrcMLGumTreeBuilderTest {
 				.getResourceAsStream("/java/example5/new.xml");
 
 		SrcMLDiff diff = new SrcMLDiffImpl();
-		diff.compare(oldVersion, newVersion);
+		SrcMLDiffResult result = diff.compare(oldVersion, newVersion);
 
-		List<Action> rootActions = diff.getRootActions();
+		List<Action> rootActions = result.getRootActions();
 
 		assertEquals(2, rootActions.size());
 	}
